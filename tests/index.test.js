@@ -22,21 +22,62 @@ test('string length to be less than 10', () => {
 })
 
 //Test calculator
-describe('calculator checks', () => {
-  test('Checks add()', () => {
+describe('addition calculator checks', () => {
+  test('Checks addition of two positive numbers', () => {
     expect(calc.add(5, 5)).toBe(10)
   })
-  test('Checks subtract()', () => {
-    expect(calc.subtract(5, 5)).toBe(0)
+  test('Checks addition of positive and negative numbers', () => {
+    expect(calc.add(3, -5)).toBe(-2)
   })
-  test('Checks divide()', () => {
-    expect(calc.divide(5, 5)).toBe(1)
-  })
-  test('Checks multiply()', () => {
-    expect(calc.multiply(5, 5)).toBe(25)
+  test('checks addition of two negative numbers', () => {
+    expect(calc.add(-3, -4)).toBe(-7)
   })
 
-  //Test capitalise
+  describe('subtraction calculator checks', () => {
+    test('Subtraction checks of two positive numbers()', () => {
+      expect(calc.subtract(6, 5)).toBe(1)
+    })
+    test('Subtraction checks of a positive and negative number()', () => {
+      expect(calc.subtract(6, -5)).toBe(11)
+    })
+    test('Subtraction checks of a positive and negative number()', () => {
+      expect(calc.subtract(-3, -5)).toBe(2)
+    })
+  })
+
+  describe('Division calculator checks', () => {
+    test('Checks division of two equal positive numbers()', () => {
+      expect(calc.divide(5, 5)).toBe(1)
+    })
+    test('Checks division of an odd and even number()', () => {
+      expect(calc.divide(6, 5)).toBe(1.2)
+    })
+    test('Checks division of positive and negative numbers()', () => {
+      expect(calc.divide(6, -2)).toBe(-3)
+    })
+    test('Checks division of negative and positive numbers()', () => {
+      expect(calc.divide(-6, 2)).toBe(-3)
+    })
+    test('Checks division of two negative numbers()', () => {
+      expect(calc.divide(-6, -2)).toBe(3)
+    })
+  })
+
+  describe('Multiplication calculator checks', () => {
+    test('Checks multiplication of two positive numbers()', () => {
+      expect(calc.multiply(5, 5)).toBe(25)
+    })
+     test('Checks multiplication of a positive and negative number()', () => {
+       expect(calc.multiply(7, -5)).toBe(-35)
+     })
+     test('Checks multiplication of two negative numbers()', () => {
+       expect(calc.multiply(-7, -5)).toBe(35)
+     })
+  })
+
+  
+
+  //Test capitalize
 
   test('Checks whether capitalize() works', () => {
     expect(capitalize('horses')).toMatch('Horses')
