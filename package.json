@@ -1,0 +1,23 @@
+{
+  "name": "testing-practice",
+  "version": "1.0.0",
+  "description": "In this project I practiced how to use Jest for testing by writing few test cases",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teke85/testing-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teke85/testing-practice/issues"
+  },
+  "homepage": "https://github.com/teke85/testing-practice#readme",
+  "devDependencies": {
+    "jest": "^29.1.2"
+  }
+}
